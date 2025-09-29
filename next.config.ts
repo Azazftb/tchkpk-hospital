@@ -6,8 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/tchkpk-hospital' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/tchkpk-hospital' : '',
+  // Remove assetPrefix and basePath for custom domain
+  // These are only needed for GitHub Pages subdirectories like username.github.io/repo-name
+  // For custom domains like tchkpk.com, assets should load from root
 };
 
 export default nextConfig;
